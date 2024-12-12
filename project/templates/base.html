@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог музики та плейлисти - {% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Загальні стилі для шрифтів */
+      body {
+        font-family: 'Poppins', sans-serif; /* Використовуємо сучасний шрифт Poppins */
+        background-color: #f3f4f6; /* Світло-сірий фон */
+        color: #333333; /* Темно-сірий текст */
+      }
+
+      /* Стилі для навігаційної панелі */
+      nav {
+        background-color: #ff6363; /* Яскравий червоний фон */
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ffdfdf; /* Світліший відтінок червоного при наведенні */
+        text-decoration: underline;
+      }
+
+      /* Стилі для основного контенту */
+      main {
+        background-color: #ffffff; /* Білий фон для основного контенту */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Заголовки */
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif; /* Встановлюємо шрифт для заголовків */
+        color: #2c3e50; /* Темно-синій колір для заголовків */
+        font-weight: bold;
+      }
+
+      /* Параграфи та текст */
+      p, li {
+        font-family: 'Roboto', sans-serif; /* Шрифт для основного тексту */
+        line-height: 1.6;
+        color: #4a4a4a; /* Сірий колір тексту для кращої читабельності */
+      }
+
+      /* Стилі для кнопок */
+      button {
+        background-color: #3498db; /* Синій фон для кнопок */
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9; /* Темніший відтінок синього при наведенні */
+      }
+
+      /* Стилі для посилань */
+      a {
+        color: #1abc9c; /* Яскравий бірюзовий колір для посилань */
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: #16a085; /* Темніший бірюзовий при наведенні */
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold">Каталог музики та плейлисти</a>
+        <div class="space-x-4">
+          <a href="/users">Користувачі</a>
+          <a href="/playlists">Плейлисти</a>
+          <a href="/tracks">Музичні треки</a>
+          <a href="/playlists_tracks">Плейлисти з треками</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto mt-8 px-4">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
